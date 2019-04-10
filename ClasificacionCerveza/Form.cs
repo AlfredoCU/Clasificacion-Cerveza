@@ -79,7 +79,7 @@ namespace ClasificacionCerveza {
 
         // Botón de Información del Sistema.
         private void btnInf_Click(object sender, EventArgs e) {
-            string mensaje = "Este sistema esta creado por ArdComputer.\nPrograma: Clasificación de Cerveza.\nProgramador: Alfredo Carreón Urbano.\nVersión: 1.0";
+            string mensaje = "Este sistema esta creado por ArdComputer.\nPrograma: Clasificación de Cervezas.\nProgramador: Alfredo Carreón Urbano.\nVersión: 1.0";
             MessageBox.Show(mensaje, "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
