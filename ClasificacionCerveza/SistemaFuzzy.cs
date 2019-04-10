@@ -8,10 +8,7 @@ namespace ClasificacionCerveza {
     class SistemaFuzzy {
         // Instancia de la Biblioteca Fuzzy.
         BiblioFuzzy bf = new BiblioFuzzy();
-
-        // Atributos.
-        private string msg1, msg2, msg3;
-        
+                
         // Rangos y Salidas.
         public String[] conjuntosSabor = { "Dulce", "Intermedio", "Amarga" };
         public String[] conjuntosTemperatura = { "Muy-Fría", "Fría", "Tibia" };
@@ -35,37 +32,36 @@ namespace ClasificacionCerveza {
         }
 
         // Método de Muestra Nivel de Membrecía.
-        public string MuestraNivMemMay(String msg, double[] nivsMem) {
-            msg1 = (msg + ": [");
+        public void MuestraNivMemMay(String msg, double[] nivsMem) {
+            Console.Write(msg + ": [");
             for (int i = 0; i < nivsMem.Length; i++) {
-                msg2 =(nivsMem[i] + (i + 1 == nivsMem.Length ? "]" : ", "));
-                msg3 = (msg1 + msg2);
+                Console.Write(nivsMem[i] + (i + 1 == nivsMem.Length ? "]" : ", "));
             }
-            return msg3;
+            Console.WriteLine();
         }
 
         // Método Membrecía Sabor.
-        public string ProdMembsSabor(double datoNitidoSabor) {
+        public void ProdMembsSabor(double datoNitidoSabor) {
             nivsMemSabor[0] = bf.Curva_Z(datoNitidoSabor, 0, 60);
             nivsMemSabor[1] = bf.TriangularSuave(datoNitidoSabor, 0, 60, 120);
             nivsMemSabor[2] = bf.Curva_S(datoNitidoSabor, 60, 120);
-            return MuestraNivMemMay(("\n-Membresías Sabor: " + datoNitidoSabor), nivsMemSabor);
+            MuestraNivMemMay(("\n-Membresías Sabor: " + datoNitidoSabor), nivsMemSabor);
         }
 
         // Método Membrecía Temperatura.
-        public string ProdMembsTemperatura(double datoNitidoTemperatura) {
+        public void ProdMembsTemperatura(double datoNitidoTemperatura) {
             nivsMemTemperatura[0] = bf.Curva_Z(datoNitidoTemperatura, 2, 5.665);
             nivsMemTemperatura[1] = bf.TriangularSuave(datoNitidoTemperatura, 2, 5.665, 13);
             nivsMemTemperatura[2] = bf.Curva_S(datoNitidoTemperatura, 5.665, 13);
-            return MuestraNivMemMay(("\n-Membresías Temperatura: " + datoNitidoTemperatura), nivsMemTemperatura);
+            MuestraNivMemMay(("\n-Membresías Temperatura: " + datoNitidoTemperatura), nivsMemTemperatura);
         }
 
         // Método Membrecía Alcohol.
-        public string ProdMembsAlcohol(double datoNitidoAlcohol) {
+        public void ProdMembsAlcohol(double datoNitidoAlcohol) {
             nivsMemAlcohol[0] = bf.Curva_Z(datoNitidoAlcohol, 0.8, 5.373);
             nivsMemAlcohol[1] = bf.TriangularSuave(datoNitidoAlcohol, 0.8, 5.373, 9);
             nivsMemAlcohol[2] = bf.Curva_S(datoNitidoAlcohol, 5.373, 9);
-            return MuestraNivMemMay(("\n-Membresías Alcohol: " + datoNitidoAlcohol), nivsMemAlcohol);
+            MuestraNivMemMay(("\n-Membresías Alcohol: " + datoNitidoAlcohol), nivsMemAlcohol);
         }
 
         // Método Fuzzificar Sabor.
