@@ -79,47 +79,41 @@ namespace ClasificacionCerveza {
 
         // Botón de Información del Sistema.
         private void btnInf_Click(object sender, EventArgs e) {
-            string mensaje = "Este sistema esta creado por ArdComputer.\nPrograma: Clasificación de Cerveza.\nProgramador: Alfredo Carreón Urbano.\nVersión: 1.0";
+            string mensaje = "Este sistema esta creado por ArdComputer.\nPrograma: Clasificación de Cervezas.\nProgramador: Alfredo Carreón Urbano.\nVersión: 1.0";
             MessageBox.Show(mensaje, "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         public void Resultados() {
-            string data1, data2, data3, data4, data5, data6, data7, data8, data9, data10, data11;
-            // double[]  nivsMemSabor = null;
-            // double[] nivsMemTemperatura = null;
-            // double[] nivsMemAlcohol = null;
-            // string[] args;
+            string data1, data2, data3, data4, data5, data6, data7;
             estiloNitido = 0.0;
-            // temperaturaNitido = Double.Parse(args[0]);
-            // saborNitido = Double.Parse(args[1]);
-            // alcoholNitido = Double.Parse(args[2]);
+            estiloDifuso = "";
 
             // Fuzzificar Valores Nítidos de Entrada...
             saborDifuso = sf.FuzzificarSabor(saborNitido);
             temperaturaDifuso = sf.FuzzificarTemperatura(temperaturaNitido);
             alcoholDifuso = sf.FuzzificarAlcohol(alcoholNitido);
             data1 = ("\t\t\t Estilos de Cervezas.\n");
-            data2 = sf.ProdMembsSabor(saborNitido);
-            data3 = sf.ProdMembsTemperatura(temperaturaNitido);
-            data4 = sf.ProdMembsAlcohol(alcoholNitido);
+            //data2 = sf.ProdMembsSabor(saborNitido);
+            //data3 = sf.ProdMembsTemperatura(temperaturaNitido);
+            //data4 = sf.ProdMembsAlcohol(alcoholNitido);
 
             // Notificar en Consola Resultados de la Fuzzificación.
-            data5 = ("\n\n-Para Sabor: " + saborNitido + " Corresponde: " + saborDifuso);
-            data6 = ("\n-Para Temperatura: " + temperaturaNitido + " Corresponde: " + temperaturaDifuso);
-            data7 = ("\n-Para Alcohol: " + alcoholNitido + " Corresponde: " + alcoholDifuso);
+            data2 = ("\n\n-Para Sabor: " + saborNitido + " Corresponde: " + saborDifuso);
+            data3 = ("\n-Para Temperatura: " + temperaturaNitido + " Corresponde: " + temperaturaDifuso);
+            data4 = ("\n-Para Alcohol: " + alcoholNitido + " Corresponde: " + alcoholDifuso);
 
             // Realizar Inferencia Difusa Cualitativa. A partir de Valores Difusos Calculados.
             estiloDifuso = sf.InferirEstiloDifusaCualitativo(saborDifuso, temperaturaDifuso, alcoholDifuso);
 
             // Notificar en Consola Resultados de la Inferencia Difusa Cualitativa.
-            data8 = ("\n\n-El Estilo(s) que se recomienda(n) es(son): " + estiloDifuso);
+            data5 = ("\n\n-El Estilo(s) que se recomienda(n) es(son): " + estiloDifuso);
             this.lblEst.Text = "Estilo(s): " + estiloDifuso;
             // Realizar Inferencia Difusa Cuantitativa. A partir de Valores Difusos Calculados.
             nivMemEstilo = sf.InferirTallaDifusaCuantitativo(saborDifuso, temperaturaDifuso, alcoholDifuso);
 
             // Notificar en Consola Resultados de la Inferencia Difusa Cuantitativa.
-            data9 = (", con una certeza de: " + nivMemEstilo);
-            data10 = sf.MuestraNivMemMay("\n-Membresías Estilo(s)", sf.nivsMemEstilos);
+            data6 = (", con una certeza de: " + nivMemEstilo);
+            sf.MuestraNivMemMay("\n-Membresías Estilo(s)", sf.nivsMemEstilos);
 
             // Con el fin de realizar alguna respuesta de control, es posible Desfuzzificar la respuesta 
             // Difusa que el sistema produce. En este caso, elegir una camisa específica por número directo
@@ -127,8 +121,8 @@ namespace ClasificacionCerveza {
             estiloNitido = sf.Desfuzzificar(estiloDifuso, nivMemEstilo);
 
             // Notificar en Consola Resultados de la Desfuzzificación.
-            data11 = ("\n-Desfuzzificación correspondiente: " + estiloNitido);
-            rtbResultados.Text = (data1 + data2 + data3 + data4 + data5 + data6 + data7 + data8 + data9 + data10 + data11);
+            data7 = ("\n-Desfuzzificación correspondiente: " + estiloNitido);
+            rtbResultados.Text = (data1  + data2 + data3 + data4 + data5 + data6 + data7);
         }
     }
 }

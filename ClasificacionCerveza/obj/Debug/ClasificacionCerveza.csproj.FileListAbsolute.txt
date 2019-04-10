@@ -18,3 +18,14 @@ C:\Users\Alfredo\Desktop\ClasificacionCerveza\ClasificacionCerveza\obj\Debug\Cla
 C:\Users\Alfredo\Desktop\ClasificacionCerveza\ClasificacionCerveza\obj\Debug\ClasificacionCerveza.csproj.GenerateResource.Cache
 C:\Users\Alfredo\Desktop\ClasificacionCerveza\ClasificacionCerveza\obj\Debug\ClasificacionCerveza.Estilo.resources
 C:\Users\Alfredo\Desktop\ClasificacionCerveza\ClasificacionCerveza\obj\Debug\ClasificacionCerveza.Tabla.resources
+C:\Users\Alfredo\Desktop\Actividad 5\Código\ClasificacionCerveza\ClasificacionCerveza\bin\Debug\ClasificacionCerveza.exe.config
+C:\Users\Alfredo\Desktop\Actividad 5\Código\ClasificacionCerveza\ClasificacionCerveza\obj\Debug\ClasificacionCerveza.exe
+C:\Users\Alfredo\Desktop\Actividad 5\Código\ClasificacionCerveza\ClasificacionCerveza\obj\Debug\ClasificacionCerveza.pdb
+C:\Users\Alfredo\Desktop\Actividad 5\Código\ClasificacionCerveza\ClasificacionCerveza\bin\Debug\ClasificacionCerveza.exe
+C:\Users\Alfredo\Desktop\Actividad 5\Código\ClasificacionCerveza\ClasificacionCerveza\bin\Debug\ClasificacionCerveza.pdb
+C:\Users\Alfredo\Desktop\Actividad 5\Código\ClasificacionCerveza\ClasificacionCerveza\obj\Debug\ClasificacionCerveza.csprojResolveAssemblyReference.cache
+C:\Users\Alfredo\Desktop\Actividad 5\Código\ClasificacionCerveza\ClasificacionCerveza\obj\Debug\ClasificacionCerveza.ClasificacionCerveza.resources
+C:\Users\Alfredo\Desktop\Actividad 5\Código\ClasificacionCerveza\ClasificacionCerveza\obj\Debug\ClasificacionCerveza.Estilo.resources
+C:\Users\Alfredo\Desktop\Actividad 5\Código\ClasificacionCerveza\ClasificacionCerveza\obj\Debug\ClasificacionCerveza.Properties.Resources.resources
+C:\Users\Alfredo\Desktop\Actividad 5\Código\ClasificacionCerveza\ClasificacionCerveza\obj\Debug\ClasificacionCerveza.Tabla.resources
+C:\Users\Alfredo\Desktop\Actividad 5\Código\ClasificacionCerveza\ClasificacionCerveza\obj\Debug\ClasificacionCerveza.csproj.GenerateResource.Cache
